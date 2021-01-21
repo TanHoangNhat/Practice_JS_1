@@ -1,0 +1,70 @@
+.exercise .container {}
+
+.exercise ul {
+    display: block;
+    background: #5e646b;
+}
+
+.exercise ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    /* color: white; */
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    transition: .4s all;
+    letter-spacing: 1px;
+}
+
+.exercise ul li a.active {
+    background-color: transparent !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 1.2rem;
+}
+
+.exercise ul li a span {
+    position: relative;
+    z-index: 1;
+}
+
+.exercise ul li a::before {
+    content: "";
+    background-color: #343a40;
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .4s all;
+    /* border-radius: 0 50% 0 0; */
+}
+
+.exercise ul li a:hover {
+    font-size: 1.2rem;
+}
+
+.exercise ul li a.active::before,
+.exercise ul li a:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+.exercise ul li a:hover::before {
+    background-color: hsla(210, 10%, 23%, 0.6);
+}
+
+.exercise ul li a::after {
+    content: "";
+    background-color: #0e141a !important;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    transition: .4s all;
+}
+
+.exercise ul li a:hover::after, .exercise ul li a.active::after {
+    width: 100%;
+}
