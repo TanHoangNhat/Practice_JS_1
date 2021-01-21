@@ -144,3 +144,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+.exercise .exercise__content .exercise__item input,
+.exercise .exercise__content .exercise__item button {
+    font-size: 1.5rem;
+}
