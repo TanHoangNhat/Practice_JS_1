@@ -71,8 +71,8 @@
                             <div class="pl-5 card-body">
                                 <h4 class="card-title my-4">Lương 100.000VNĐ/Ngày</h4>
                                 <input id="txtWorkingDay" class="form-control my-5 col-md-2" type="number"
-                                    placeholder="Số ngày làm việc">
-                                <button class="col-md-2 btn" onclick="countSalary()">Tính tiền lương<span>Tính tiền lương</span></button>
+                                    placeholder="Số ngày làm việc" onkeyup="enableButton__1()">
+                                <button id="btnCountSalary" disabled class="col-md-2 btn" onclick="countSalary()">Tính tiền lương<span>Tính tiền lương</span></button>
                             </div>
                             <div class="pl-5 card-footer">
                                 <h2 id="txtResult__1">Tổng tiền lương: </h2>
@@ -87,13 +87,13 @@
                             <div class="pl-5 card-body">
                                 <h4 class="card-title my-4">Nhập vào 5 số</h4>
                                 <div class="row col-md-8 my-5">
-                                    <input id="txtNumber1" class="form-control mr-3 col-md-1" type="number">
-                                    <input id="txtNumber2" class="form-control mr-3 col-md-1" type="number">
-                                    <input id="txtNumber3" class="form-control mr-3 col-md-1" type="number">
-                                    <input id="txtNumber4" class="form-control mr-3 col-md-1" type="number">
-                                    <input id="txtNumber5" class="form-control mr-3 col-md-1" type="number">
+                                    <input id="txtNumber1" class="form-control mr-3 col-md-1" type="number" onkeyup="enableButton__2()">
+                                    <input id="txtNumber2" class="form-control mr-3 col-md-1" type="number" onkeyup="enableButton__2()">
+                                    <input id="txtNumber3" class="form-control mr-3 col-md-1" type="number" onkeyup="enableButton__2()">
+                                    <input id="txtNumber4" class="form-control mr-3 col-md-1" type="number" onkeyup="enableButton__2()">
+                                    <input id="txtNumber5" class="form-control mr-3 col-md-1" type="number" onkeyup="enableButton__2()">
                                 </div>
-                                <button onclick="countAvg()" class="btn">Tính giá trị trung bình<span>Tính giá trị trung bình</span></button>
+                                <button id="btnCountAvg" onclick="countAvg()" class="btn" disabled>Tính giá trị trung bình<span>Tính giá trị trung bình</span></button>
                             </div>
                             <div class="pl-5 card-footer">
                                 <h2 id="txtResult__2">Giá trị trung bình:</h2>
@@ -109,9 +109,9 @@
                                 <h4 class="card-title my-4">Tỷ giá USD: 23,500VNĐ</h4>
                                 <div class="row my-5 m-0">
                                     <input id="txtExchangeMoney" class="form-control col-md-2" type="number"
-                                        placeholder="Số USD quy đổi">
+                                        placeholder="Số USD quy đổi" onkeyup="enableButton__3()">
                                 </div>
-                                <button onclick="exchangeMoney()" class="col-md-2 btn">Quy đổi<span>Quy đổi</span></button>
+                                <button id="btnExchangeMoney" onclick="exchangeMoney()" class="col-md-2 btn" disabled>Quy đổi<span>Quy đổi</span></button>
                             </div>
                             <div class="pl-5 card-footer">
                                 <h2 id="txtResult__3">Thành tiền: </h2>
@@ -127,13 +127,13 @@
                                 <h4 class="card-title my-4">Nhập vào chiều dài và chiều rộng</h4>
                                 <div class="row col-md-6 my-5 mx-0 p-0">
                                     <input id="txtLength" class="mr-3 col-md-3 form-control" type="number"
-                                        placeholder="Chiều dài">
+                                        placeholder="Chiều dài" onkeyup="enableButton__4()">
                                     <input id="txtWidth" class="col-md-3 form-control" type="number"
-                                        placeholder="Chiều rộng">
+                                        placeholder="Chiều rộng" onkeyup="enableButton__4()">
                                 </div>
                                 <div class="row col-md-6 m-0 p-0">
-                                    <button onclick="countArea()" class="col-md-3 mr-3 btn">Tính diện tích<span>Tính diện tích</span></button>
-                                    <button onclick="countPerimeter()" class="col-md-3 btn">Tính chu vi<span>Tính chu vi</span></button>
+                                    <button id="btnCountArea" onclick="countArea()" class="col-md-3 mr-3 btn" disabled>Tính diện tích<span>Tính diện tích</span></button>
+                                    <button id="btnCountPerimeter" onclick="countPerimeter()" class="col-md-3 btn" disabled>Tính chu vi<span>Tính chu vi</span></button>
                                 </div>
                             </div>
                             <div class="pl-5 card-footer">
@@ -151,8 +151,8 @@
                             </div>
                             <div class="pl-5 card-body">
                                 <h4 class="card-title my-4">Nhập vào một số có 2 chữ số</h4>
-                                <input id="txtNumber" class="form-control my-5 col-md-2" type="number">
-                                <button onclick="countSum()" class="col-md-2 btn">Tổng 2 ký số<span>Tổng 2 ký số</span></button>
+                                <input id="txtNumber" class="form-control my-5 col-md-2" type="number" onkeyup="enableButton__5()">
+                                <button id="btnCountSum" onclick="countSum()" class="col-md-2 btn" disabled>Tổng 2 ký số<span>Tổng 2 ký số</span></button>
                             </div>
                             <div class="pl-5 card-footer">
                                 <h2 id="txtResult__5">Tổng 2 ký số: </h2>

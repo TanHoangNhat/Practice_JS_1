@@ -25,3 +25,16 @@ function countPerimeter() {
     var perimeter = (length + width) * 2;
     document.getElementById("txtResult__4--2").innerHTML = "Chu vi HCN: " + perimeter;
 }
+
+function enableButton__4() {
+    var length = document.getElementById("txtLength").value;
+    var width = document.getElementById("txtWidth").value;
+ 
+    if (length != "" && width != "") {
+       document.getElementById("btnCountArea").disabled = false;
+       document.getElementById("btnCountPerimeter").disabled = false;
+    } else {
+       document.getElementById("btnCountArea").disabled = true;
+       document.getElementById("btnCountPerimeter").disabled = true;
+    }
+ }

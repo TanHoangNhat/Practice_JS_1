@@ -217,7 +217,7 @@ input::-webkit-inner-spin-button {
     box-shadow: none;
 }
 
-.exercise .exercise__content .exercise__item button:hover::after {
+.exercise .exercise__content .exercise__item button:enabled:hover::after {
     /* background: var(--color__2);
     transition: .4s all; */
     width: 140%;

@@ -18,5 +18,13 @@ function countSalary() {
 
     var currentFormat = new Intl.NumberFormat("vn-VN");
 
-    document.getElementById("txtResult__1").innerHTML = "Tổng tiền lương: " + currentFormat.format(totalSalary) + "VNĐ";
+    document.getElementById("txtResult__1").innerHTML = "Tổng tiền lương: " + currentFormat.format(totalSalary) + " VNĐ";
+}
+
+function enableButton__1() {
+    if (document.getElementById("txtWorkingDay").value != "") {
+        document.getElementById("btnCountSalary").disabled = false;
+    } else {
+        document.getElementById("btnCountSalary").disabled = true;
+    }
 }

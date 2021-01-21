@@ -22,3 +22,11 @@ function countSum() {
 
     document.getElementById("txtResult__5").innerHTML = "Tổng 2 ký số: " + total;
 }
+
+function enableButton__5() {
+    if (document.getElementById("txtNumber").value != "") {
+        document.getElementById("btnCountSum").disabled = false;
+    } else {
+        document.getElementById("btnCountSum").disabled = true;
+    }
+}

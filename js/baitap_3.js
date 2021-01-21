@@ -18,5 +18,13 @@
 
     var currentFormat = new Intl.NumberFormat("vn-VN");
 
-    document.getElementById("txtResult__3").innerHTML = "Thành tiền: " + currentFormat.format(totalMoney) + "VNĐ";
+    document.getElementById("txtResult__3").innerHTML = "Thành tiền: " + currentFormat.format(totalMoney) + " VNĐ";
  }
+
+ function enableButton__3() {
+   if (document.getElementById("txtExchangeMoney").value != "") {
+       document.getElementById("btnExchangeMoney").disabled = false;
+   } else {
+       document.getElementById("btnExchangeMoney").disabled = true;
+   }
+}
