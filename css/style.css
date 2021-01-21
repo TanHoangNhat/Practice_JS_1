@@ -1,3 +1,49 @@
+/* Header */
+
+:root {
+    --color__1: #64ffff;
+    --color__2: #00cdce;
+    --color__3: #009b9d;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+header .header__logo a {
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+}
+
+header .header__logo a:hover h1 {
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0px 0px 1.5rem rgba(255, 255, 255, 0.6);
+}
+
+header .header__logo h1 {
+    color: var(--color__2);
+    font-size: 7rem;
+    transition: .4s all;
+    letter-spacing: .5rem;
+}
+
+header .header__title h1 {
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+header .header__title h3 {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+}
+
+/* Exercise */
+
 .exercise .container {}
 
 .exercise ul {
@@ -6,21 +52,21 @@
 }
 
 .exercise ul li a {
-    color: rgba(255, 255, 255, 0.6);
-    /* color: white; */
+    color: rgba(0, 0, 0, 0.8) !important;
     text-transform: uppercase;
-    font-size: .9rem;
-    line-height: 1.2rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    font-weight: 700;
     position: relative;
     transition: .4s all;
     letter-spacing: 1px;
+    overflow: hidden;
+    border-radius: 0 !important;
 }
 
-.exercise ul li a.active {
-    background-color: transparent !important;
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-size: 1.2rem;
+.exercise ul li a.active, .exercise ul li a:hover {
+    font-size: 2rem;
+    letter-spacing: .3rem;
 }
 
 .exercise ul li a span {
@@ -30,36 +76,30 @@
 
 .exercise ul li a::before {
     content: "";
-    background-color: #343a40;
-    width: 0%;
-    height: 0%;
     position: absolute;
-    bottom: 0;
+    top: 50%;
+    transform: translate(-2rem, -50%);
     left: 0;
+    width: 0;
+    height: 0;
+    border-top: .8rem solid transparent;
+    border-bottom: .8rem solid transparent;
+    border-left: 1.2rem solid var(--color__3);
+    z-index: 4;
     transition: .4s all;
-    /* border-radius: 0 50% 0 0; */
 }
 
-.exercise ul li a:hover {
-    font-size: 1.2rem;
-}
-
-.exercise ul li a.active::before,
-.exercise ul li a:hover::before {
-    height: 100%;
-    width: 100%;
-}
-
-.exercise ul li a:hover::before {
-    background-color: hsla(210, 10%, 23%, 0.6);
+.exercise ul li a.active::before, .exercise ul li a:hover::before {
+    transform: translate(.8rem, -50%);
 }
 
 .exercise ul li a::after {
     content: "";
-    background-color: #0e141a !important;
-    position: absolute;
+    background-color: var(--color__1);
     width: 0%;
-    height: 4px;
+    height: 0%;
+    border-bottom: 4px solid var(--color__3);
+    position: absolute;
     bottom: 0;
     left: 0;
     transition: .4s all;
@@ -67,4 +107,40 @@
 
 .exercise ul li a:hover::after, .exercise ul li a.active::after {
     width: 100%;
+    height: 100%;
+}
+
+.exercise__content .exercise__item .card {
+    position: relative;
+    border-right: 1px solid #8b9299;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.exercise__content .exercise__item .card-header,
+.exercise__content .exercise__item .card-footer {
+    border: none;
+    background-color: #8b9299;
+    border-radius: 0;
+}
+
+.exercise__content .exercise__item .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.exercise__content .exercise__item .card-header h2,
+.exercise__content .exercise__item .card-footer h2 {
+    line-height: 5rem;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
