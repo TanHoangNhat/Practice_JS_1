@@ -18,7 +18,7 @@
 
     var currentFormat = new Intl.NumberFormat("vn-VN");
 
-    document.getElementById("txtResult__3").innerHTML = "Thành tiền: " + currentFormat.format(totalMoney) + " VNĐ";
+    document.getElementById("txtResult__3").innerHTML = "Thành tiền: " + currentFormat.format(totalMoney) + " VND";
  }
 
  function enableButton__3() {

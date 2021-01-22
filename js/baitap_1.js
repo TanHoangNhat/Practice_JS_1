@@ -1,7 +1,7 @@
 /**
  * Mô hình 3 khối
  * * Đầu vào (input)
- * * * Lương 1 ngày 100.000 VNĐ => var dailySalary = 100000
+ * * * Lương 1 ngày 100.000 VND => var dailySalary = 100000
  * * * Số ngày làm việc => var workingDay
  * * * Tổng tiền lương => var totalSalary
  * * Xử lý
@@ -18,7 +18,7 @@ function countSalary() {
 
     var currentFormat = new Intl.NumberFormat("vn-VN");
 
-    document.getElementById("txtResult__1").innerHTML = "Tổng tiền lương: " + currentFormat.format(totalSalary) + " VNĐ";
+    document.getElementById("txtResult__1").innerHTML = "Tổng tiền lương: " + currentFormat.format(totalSalary) + " VND";
 }
 
 function enableButton__1() {
